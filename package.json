@@ -1,0 +1,20 @@
+{
+  "name": "xmpp-client-app",
+  "version": "0.1.0",
+  "private": true,
+  "repository": "https://github.com/jorgecas/xmpp-client-app",
+  "dependencies": {
+    "node-xmpp-client": "^3.2.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
