@@ -1,9 +1,7 @@
-import React from 'react';
 import XMPP from 'node-xmpp-client/browserify';
 
-export default class IM extends React.Component {
+export default class IM {
     constructor(options) {
-        super();
         this.options = Object.assign({}, options);
 
         this.state = {
@@ -24,12 +22,11 @@ export default class IM extends React.Component {
     }
 
     createClient() {
-        let { user = 'user', password = 'secret' } = this.state;
+        let { user = 'user', password = 'secret', resource = 'browser' } = this.state;
 
         this.client = new XMPP.Client({
-            // websocket: { url: 'ws://localhost:5280/xmpp-websocket/' },
             bosh: {url: 'http://localhost:5222/'},
-            jid: `${user}@localhost`,
+            jid: `${user}@localhost/${resource}`,
             password: password,
             preferred: 'PLAIN'
         });
@@ -45,7 +42,8 @@ export default class IM extends React.Component {
             this.setState({connectionStatus: err});
         })
         this.client.on('stanza', stanza => {
-            this.setState({connectionStatus: stanza.toString()});
+            debugger;
+            this.setState({connectionStatus: stanza});
         })
 
         this.client.on('disconect', () => {
@@ -65,25 +63,5 @@ export default class IM extends React.Component {
 
     connect() {
         this.createClient();
-    }
-
-    render() {
-        return (
-        <div className="im-container">
-            <div className="im-header">
-            IM
-            <input type="text" name='user' value={this.state.user} onChange={this.handleChange} />
-            <input type='button' value='Connect' onClick={this.connect}/>
-            </div>
-            <label>To:</label>
-            <input name='destination' value={this.state.destination} onChange={this.handleChange} /><br/>
-            <label>Message:</label>
-            <textarea name='message' cols='40' rows='4' value={this.state.message} onChange={this.handleChange} ></textarea><br/>
-            <input type='button' value='Send' onClick={this.sendMessage}/>
-            <p className="im-body">
-            <span>{this.state.connectionStatus}</span>
-            </p>
-        </div>
-        );
     }
 }
