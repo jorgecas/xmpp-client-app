@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Contact from './contact';
+
 import './css/contact-list.css';
 
 export default class ContactList extends Component {
@@ -10,9 +12,7 @@ export default class ContactList extends Component {
                     <h3 className='online-contacts--title'>Online</h3>
                     <div>
                         <ul className='contact-list'>
-                            <li className='contact'>Contact_1</li>
-                            <li className='contact'>Contact_2</li>
-                            <li className='contact'>Contact_3</li>
+                            <Contact/>
                         </ul>
                     </div>
                 </div>
@@ -20,9 +20,7 @@ export default class ContactList extends Component {
                     <h3 className='online-contacts--title'>Offline</h3>
                     <div>
                         <ul className='contact-list'>
-                            <li className='contact'>Contact_1</li>
-                            <li className='contact'>Contact_2</li>
-                            <li className='contact'>Contact_3</li>
+                            <Contact status='offline'/>
                         </ul>
                     </div>
                 </div>
