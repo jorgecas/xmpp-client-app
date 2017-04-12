@@ -9,7 +9,7 @@ export default class ContactList extends Component {
         return (
             <div>
                 <div>
-                    <h3 className='online-contacts--title'>Online</h3>
+                    <h3 className='contacts-title--online'>Online</h3>
                     <div>
                         <ul className='contact-list'>
                             <Contact/>
@@ -17,7 +17,7 @@ export default class ContactList extends Component {
                     </div>
                 </div>
                 <div>
-                    <h3 className='online-contacts--title'>Do not disturb</h3>
+                    <h3 className='contacts-title--dnd'>Do not disturb</h3>
                     <div>
                         <ul className='contact-list'>
                             <Contact status='dnd'/>
@@ -25,18 +25,18 @@ export default class ContactList extends Component {
                     </div>
                 </div>
                 <div>
-                    <h3 className='online-contacts--title'>Offline</h3>
+                    <h3 className='contacts-title--away'>Away</h3>
                     <div>
                         <ul className='contact-list'>
-                            <Contact status='offline'/>
+                            <Contact status='away'/>
                         </ul>
                     </div>
                 </div>
                 <div>
-                    <h3 className='online-contacts--title'>Away</h3>
+                    <h3 className='contacts-title--offline'>Offline</h3>
                     <div>
                         <ul className='contact-list'>
-                            <Contact status='away'/>
+                            <Contact status='offline'/>
                         </ul>
                     </div>
                 </div>

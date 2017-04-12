@@ -14,7 +14,7 @@ export default class Contact extends Component {
 
     }
     render() {
-        let status = this.state.status ? 'contact-status-' + this.state.status : '';
+        let status = this.state.status ? 'contact-status--' + this.state.status : '';
         
         return (
             <div className='contact'>
