@@ -1,0 +1,6 @@
+.home {
+    height: 100%;
+    display: block;
+    border: inset 2px #555;
+    border-radius: 1rem;
+}

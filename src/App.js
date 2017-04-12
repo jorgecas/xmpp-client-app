@@ -1,23 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Router, Route } from 'react-router-dom';
+import createHistory from 'history/createBrowserHistory';
+
 import './App.css';
 
-import IM from './im';
+import Layout from './pages/layout';
+import Home from './pages/home';
+import About from './pages/about';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.history = createHistory();
+  }
 
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
+      <Router history={this.history}>
         <div>
-          <p>Body</p>
-          <IM />
+          <Layout />
+          <Route exact path="/" component={Home}/>
+          <Route path="/about" component={About}/>
         </div>
-      </div>
+  </Router>
     );
   }
 }

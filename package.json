@@ -4,9 +4,12 @@
   "private": true,
   "repository": "https://github.com/jorgecas/xmpp-client-app",
   "dependencies": {
+    "history": "^4.6.1",
     "node-xmpp-client": "^3.2.0",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-router": "^4.0.0",
+    "react-router-dom": "^4.0.0"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"
