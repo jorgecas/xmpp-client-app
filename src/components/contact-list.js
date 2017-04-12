@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './css/contact-list.css';
+
 export default class ContactList extends Component {
     render() {
         return (

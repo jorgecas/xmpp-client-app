@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './css/chat-window.css';
+
 export default class ChatWindow extends Component {
     render() {
         return (

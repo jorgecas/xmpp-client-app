@@ -1,0 +1,29 @@
+.chat {
+  padding: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.chat-history {
+  flex: 1 1 auto;
+  border: none;
+}
+
+.chat-controls {
+  padding: 0;
+  flex: 0 0 2rem;
+  display: flex;
+}
+
+.chat-controls .message {
+  flex: 1 1 80%;
+  border-radius: 0 0 0 0.5rem;
+  border: solid 1px #aaa;
+  background-color: rgba(255, 255, 255, 0.6)
+}
+.chat-controls .button-send {
+  flex: 1 1 20%;
+  color: #aa5;
+  font-size: 1.2rem;
+}
