@@ -1,8 +1,25 @@
-.online-contacts--title,
-.offline-contacts--title {
+.contacts-title--online {
   margin: 0;
   padding: 0.2rem;
-  background: #555;
+  background: #6c6;
+}
+
+.contacts-title--offline {
+  margin: 0;
+  padding: 0.2rem;
+  background: #ccc;
+}
+
+.contacts-title--dnd {
+  margin: 0;
+  padding: 0.2rem;
+  background: #c00;
+}
+
+.contacts-title--away {
+  margin: 0;
+  padding: 0.2rem;
+  background: #cc0;
 }
 
 .contact-list {
