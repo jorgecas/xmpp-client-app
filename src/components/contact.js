@@ -7,11 +7,10 @@ export default class Contact extends Component {
         super();
 
         this.state = Object.assign({
-            avatar: '../images/default-avatar.png',
+            avatar: 'default-avatar.png',
             name: 'Name',
             status: 'online'
-        }, options)
-
+        }, options);
     }
     render() {
         let status = this.state.status ? 'contact-status--' + this.state.status : '';

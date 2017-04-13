@@ -16,6 +16,7 @@ class Home extends Component {
               </div>
               <nav className="app-navigation">
                 <li><Link to="/" className='app-navigation--link'>Home</Link></li>
+                <li><Link to="/im" className='app-navigation--link'>IM</Link></li>
                 <li><Link to="/about" className='app-navigation--link'>About</Link></li>
                 <li className="app-navigation--login">Login</li>
               </nav>

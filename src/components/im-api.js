@@ -1,20 +1,22 @@
 import XMPP from 'node-xmpp-client/browserify';
 
-export default class IM {
+export default class IMApi {
     constructor(options) {
-        this.options = Object.assign({}, options);
-
-        this.state = {
+        this.state = Object.assign({
             connectionStatus: '',
             user: '',
             destination: '',
             message: ''
-        };
+        }, options);
         this.handleChange = this.handleChange.bind(this);
         this.connect = this.connect.bind(this);
         this.sendMessage = this.sendMessage.bind(this);
         this.destination = '';
         this.message = '';
+    }
+
+    setState(key, value) {
+        this.state[key] = value;
     }
 
     handleChange(event) {

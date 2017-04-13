@@ -6,6 +6,7 @@ import './App.css';
 
 import Layout from './pages/layout';
 import Home from './pages/home';
+import IM from './pages/im';
 import About from './pages/about';
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
         <div>
           <Layout />
           <Route exact path="/" component={Home}/>
+          <Route path="/im" component={IM}/>
           <Route path="/about" component={About}/>
         </div>
       </Router>
